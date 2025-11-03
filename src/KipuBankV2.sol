@@ -30,6 +30,8 @@ interface AggregatorV3Interface {
 contract KipuBankV2 is AccessControl, ReentrancyGuard {
     using SafeERC20 for IERC20;
 
+    uint256 private immutable _dummy = 1;
+
     bytes32 public constant ADMIN_ROLE = keccak256("ADMIN_ROLE");
     address public constant NATIVE = address(0);
     uint8 public constant USDC_DECIMALS = 6;
